@@ -1,0 +1,57 @@
+import random 
+
+print("Taşi Kağıt Makas Oynuna Hoşgeldeniz.")
+print("Kurallar: " )
+print("1-) Taş, Makas'ı Yener")
+print("2-) Kağıt, Taş'ı Yener")
+print("3-) Makas, Kağıt'ı Yener")
+
+while True:
+    seçim = int(input("Lütfen Seçim Yapnız:\n1)Taş \n2)Makas \n3)Kağıt "))
+
+    if seçim > 3 or seçim < 1:
+
+        print("Lütfen 1, 2 veya 3 seçiniz.")
+   
+
+
+
+    if seçim == 1:
+        print("Taş'ı Seçtiniz.")
+    elif seçim == 2:
+        print("Makas'ı Seçtiniz.")
+    elif seçim == 3:
+        print("Kağıt'ı Seçtiniz.")
+
+
+    bil_seçim = random.randint(1,3)
+
+    if bil_seçim == 1:
+        print("Bilgisayar Taş'ı Seçti.")
+    elif bil_seçim ==2:
+        print("Bilgisayar Makas'ı Seçti.")
+    elif bil_seçim==3:
+        print("Bilgisayar Kağıt'ı Seçti.")
+
+    
+
+    if seçim == 1 and bil_seçim == 2:
+        print("Taş, Makas'ı Yendi. Siz Kazandınız.")
+    elif seçim == 1 and bil_seçim == 3 :
+        print("Kağıt Taşı Yendi. Bilgisayar Kazandı.")
+    elif seçim == 1 and bil_seçim== 1 :
+        print("İkinizde Taşı Seçtiniz,Berabere Kaldınız.")
+
+    elif seçim == 2 and bil_seçim == 1 :
+        print("Taş, Makası Yendi, Bilgisayar Kazandı.")
+    elif seçim == 2 and bil_seçim == 2 :
+        print("İkinizde Makas Seçtiniz, Berabere Kaldınız.")
+    elif seçim == 2 and bil_seçim == 3 :
+        print("Makas, Kağıdı Yendi. Siz Kazandınız.")
+    
+    elif seçim == 3 and bil_seçim == 1 :
+        print("Kağıt, Taşı Yendi, Siz Kazandınız.")
+    elif seçim == 3 and bil_seçim == 2 :
+        print("Makas, Kağıdı Yendi, Bilgisayar Kazandı.")
+    elif seçim == 3 and bil_seçim == 3 :
+        print("İkinizde Kağıt Seçtiniz, Berabere Kaldınız")
